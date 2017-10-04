@@ -1,6 +1,7 @@
 from flask import Flask, request, redirect, render_template
 from cgi import escape
 
+
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
@@ -32,15 +33,15 @@ def sign_up():
         password_error = "Invalid Password"
     if verify == "" or very != password:
         verify_error = "Invalid Email"
-    if email_error = = "" and username_error == "" and verify_error == "" and password_error == "":
+    if email_error == "" and username_error == "" and verify_error == "" and password_error == "":
         return render_template("welcome.html"), username = username)
     else:
         return render_template("index.html" , username_error = username_error
-                                            , password_error = password_error
-                                            ,verify_error = verify_error
-                                            , email_error = email_error
-                                            , username = username
-                                            , email = email)
+                                                                , password_error = password_error
+                                                                ,verify_error = verify_error
+                                                                , email_error = email_error
+                                                                , username = username
+                                                                , email = email)
 
 
 @app.route("/")
